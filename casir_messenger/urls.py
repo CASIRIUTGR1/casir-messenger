@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url("^$", "promotion.views.index", name="index"),
     url("^promotion/", include('promotion.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^friends/', include('friends.urls')),
 )
