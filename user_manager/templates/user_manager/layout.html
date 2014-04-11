@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<h1>Bienvenue sur CASIR Messenger</h1>
+				<p>
+					CASIR Messenger la messagerie éphémère !
+				</p>
+				<p>
+					<a class="btn btn-primary btn-lg" role="button">Comment ça marche?</a>
+				</p>
+			</div>
+
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Déjà inscrit sur CASIR Messenger :
+					</p>
+					<form id="sign-in" role="form" method="post" action="#">
+						<div class="form-group">
+							<input type="text" class="form-control form-group" id="sign-username" placeholder="Nom d'utilsateur ou email"/>
+							<input type="text" class="form-control form-group" id="sign-pass" placeholder="Mot de passe"/>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="remember">
+									Se souvenir de moi</label>
+								<a href="#">Mot de passe oublié?</a>
+							</div>
+							<button type="submit" class="btn-primary btn-m">
+								Se connecter
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Nouveau sur CASIR Messenger :
+					</p>
+					<form role="form">
+						<input type="text" class="form-control form-group" id="register-username" placeholder="Pseudo"/>
+						<input type="text" class="form-control form-group" id="register-email" placeholder="email"/>
+						<input type="text" class="form-control form-group" id="register-pass" placeholder="Mot de passe"/>
+						<button type="submit" class="btn-primary btn-m">
+							Se connecter
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
