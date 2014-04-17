@@ -20,18 +20,19 @@
 					<p>
 						Déjà inscrit sur CASIR Messenger :
 					</p>
-					<form id="sign-in" role="form" method="post" action=".">
+					<form role="form" method="post" action="">
 						<div class="form-group">
-							{% csrf_token %}							
-							<input type="text" class="form-control form-group" id="id_username" placeholder="Nom d'utilsateur ou email"/>
-							<input type="text" class="form-control form-group" id="id_password" placeholder="Mot de passe"/>
+							{% csrf_token %}
+							<input type="hidden" name="form" value="auth">
+							<input type="text" class="form-control form-group" name="username" placeholder="Nom d'utilsateur ou email"/>
+							<input type="text" class="form-control form-group" name="password" placeholder="Mot de passe"/>
 							<div class="checkbox">
 								<label>
 									<input type="checkbox" id="remember">
 									Se souvenir de moi</label>
 								<a href="#">Mot de passe oublié?</a>
 							</div>
-							<button type="submit" class="btn-primary btn-m">
+							<button type="submit" class="btn btn-primary btn-m">
 								Se connecter
 							</button>
 						</div>
@@ -43,11 +44,13 @@
 					<p>
 						Nouveau sur CASIR Messenger :
 					</p>
-					<form role="form">
-						<input type="text" class="form-control form-group" id="register-username" placeholder="Pseudo"/>
-						<input type="text" class="form-control form-group" id="register-email" placeholder="email"/>
-						<input type="text" class="form-control form-group" id="register-pass" placeholder="Mot de passe"/>
-						<button type="submit" class="btn-primary btn-m">
+					<form role="form" method="post" action="">
+						{% csrf_token %}
+						<input type="hidden" name="form" value="reg">
+						<input type="text" class="form-control form-group" name="username" placeholder="Pseudo"/>
+						<input type="text" class="form-control form-group" name="password1" placeholder="Mot de passe"/>
+						<input type="text" class="form-control form-group" name="password2" placeholder="Mot de passe (encore)"/>
+						<button type="submit" class="btn btn-primary btn-m">
 							Se connecter
 						</button>
 					</form>

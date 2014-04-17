@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'casir_messenger.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url("^$", "user_manager.views.index", name="index"),
+    url(r'^$', "user_manager.views.index", name="index"),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^friends/', include('friends.urls')),
 )
